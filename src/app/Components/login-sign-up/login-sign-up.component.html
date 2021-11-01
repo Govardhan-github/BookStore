@@ -1,0 +1,127 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100%; background-color: grey;">
+    <div class="image-container" fxHide.xs style="background-color: white;" fxLayoutAlign="center center">
+        <div>
+            <img src="../../../assets/Login/shopimage.png" height="245px" width="245px" class="photo" alt="">
+            <h2 class="heading">Online Book Shoping</h2>
+        </div>
+    </div>
+
+    <div class="login-form" fxFlex.xs=100>
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="LOGIN" class="login-name">
+                <form class="form" [formGroup]="loginForm" fxLayout="column" fxLayoutGap="2px"
+                    fxLayoutAlign="space-around">
+
+                    <span for="email" class="email-span" style="padding-top: 10px;">EmailId</span>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="" formControlName="email"
+                            [ngClass]="{ 'is-invalid': loginSubmitted && f.email.errors }" />
+                        <mat-hint *ngIf="loginSubmitted && f.email.errors" class="invalid-feedback">
+                            <mat-hint *ngIf="f.email.errors.required" class="error">Email is Required</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+                    
+                    <label for="password" class="passwrd-span">Password</label>
+                    <mat-form-field appearance="outline">
+                        <div class="password-field">
+                            <input matInput placeholder="" formControlName="password"
+                                [type]="hide?'password':'text'"
+                                [ngClass]="{ 'is-invalid': loginSubmitted && f.password.errors }" />
+                            <button mat-icon-button class="hidepassword-button" style="opacity: 0.5;"
+                                (click)="showPassword()">
+                                <mat-icon style="font-size: 15px;">visibility_off</mat-icon>
+                            </button>
+                        </div>
+                        <mat-hint *ngIf="loginSubmitted && f.password.errors" class="invalid-feedback">
+                            <mat-hint *ngIf="f.password.errors.required" class="error">Password required</mat-hint>
+                             <mat-hint *ngIf="f.password.errors.required" class="pass-length" class="error">Password must be at least 6 characters</mat-hint> 
+                        </mat-hint>
+                    </mat-form-field>
+
+
+                    <button mat-button class="forgotPass">Forgot Password?</button>
+                    <button mat-raised-button class="login" (click)="onLogin()"
+                        style="background-color: #A03037; color: aliceblue;">Login</button>
+                </form>
+                <div fxLayout="row" fxLayoutAlign="space-evenly center" style="padding: 20px 0px 20px 0px;">
+                    <div style="width: 60px; opacity: 0.5;">
+                        <hr>
+                    </div>
+                    <div style="font-weight: 500; font-size: 14px;">
+                        OR
+                    </div>
+                    <div style="width: 60px; opacity: 0.5;">
+                        <hr>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-evenly center" style="margin-top: 0px; ">
+                    <button mat-button class="fb">Facebook</button>
+                    <button mat-button class="g">Google</button>
+                </div>
+
+            </mat-tab>
+
+
+            <mat-tab label="SIGNUP" class="signup-name">
+                <form fxLayout="column" class="registerForm" fxLayoutAlign="space-around" [formGroup]="registerForm"
+                    (ngSubmit)="onregister()">
+
+                    <span for="fullName" class="fullName" style="padding-top: 10px;">FullName</span>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="" formControlName="fullName"
+                            [ngClass]="{ 'is-invalid': registerSubmitted && r.fullName.errors }"
+                            style="height: 20px;" />
+                        <mat-hint *ngIf="registerSubmitted && r.fullName.errors" class="invalid-feedback">
+                            <mat-hint *ngIf="r.fullName.errors.required" class="error">FullName is Required</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+                    <span for="email" class="email" style="padding-top: 10px;">Email</span>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="" formControlName="email"
+                            [ngClass]="{ 'is-invalid': registerSubmitted && r.email.errors }" />
+                        <mat-hint *ngIf="registerSubmitted && r.email.errors" class="invalid-feedback">
+                            <mat-hint *ngIf="r.email.errors.required" class="error">Email is Required</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+                    <span for="password" class="password" style="padding-top: 10px;">Password</span>
+                    <mat-form-field appearance="outline">
+                        <div class="password-field">
+                            <input matInput placeholder="" formControlName="password" [type]="hide?'password':'text'"
+                                [ngClass]="{ 'is-invalid': registerSubmitted && r.password.errors }" />
+                            <button mat-icon-button class="hidepassword-button" style="opacity: 0.5;"
+                                (click)="showPassword()">
+                                <mat-icon style="font-size: 15px;">visibility_off</mat-icon>
+                            </button>
+                        </div>
+                        <mat-hint *ngIf="registerSubmitted && r.password.errors" class="invalid-feedback">
+                            <mat-hint *ngIf="r.password.errors.required" class="error">Password is Required</mat-hint>
+                            <!-- <mat-hint *ngIf="r.password.errors.required" class="pass-length" class="error">Password must
+                                be at least 6 characters</mat-hint> -->
+                        </mat-hint>
+                    </mat-form-field>
+
+
+                    <span for="mobileNumber" class="mobileNumber" style="padding-top: -10px;">Mobile Number</span>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="" formControlName="phone"
+                            [ngClass]="{ 'is-invalid': registerSubmitted && r.phone.errors }" />
+                        <mat-hint *ngIf="registerSubmitted && r.phone.errors" class="invalid-feedback">
+                            <mat-hint *ngIf="r.phone.errors.required" class="error">Mobile Number isRequired</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+
+
+
+                    <div style="padding-top: -15px;">
+                        <button mat-raised-button class="signup-button" (click)="onregister()">Signup
+                        </button>
+                    </div>
+                </form>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

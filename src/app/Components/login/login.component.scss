@@ -1,0 +1,51 @@
+.loginForm{
+    margin-top: 30px;
+    position: relative;
+}
+p{
+    mat-form-field{
+      margin: 2px 2px 2px 2px;
+      height: 25px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #FF001C;
+      border-radius: 2px;
+      opacity: 1;
+    }
+    }
+.emailfield{
+    width: 100%; 
+    height: 30px;
+} 
+.Password{
+    margin-top: 50px;
+}    
+.forgot{
+    border: none;
+    background-color: white;
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+}
+.loginbutton{
+    margin-top: 30px;
+    width: 100%;
+    background-color:#A03037 ;
+    color: white;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+.fb{
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    background-color: royalblue;
+    cursor: pointer;
+    color: white;
+}
+.g{
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}

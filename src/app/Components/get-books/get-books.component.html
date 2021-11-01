@@ -1,0 +1,59 @@
+<div class="main-container" style="width: 1266px; height: 1106px; ">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="head1">
+            <span style="width: 73px; height: 33px; font-size: 20px; margin-left: 174px;">Books({{booksArray.length}})</span>
+        </div>
+        <div class="sorting-class">
+            <mat-form-field appearance="outline" style="width: 150px; height: 20px;">
+                <select matNativeControl fxLayoutAlign="center center" style="width: 100%;">
+                    <option value="relevence">Sort by relevence</option>
+                    <option value="L2H">Price: Low to High</option>
+                    <option value="H2L">Price: High to Low</option>
+                    <option value="NA">Newest Arrivals</option>
+                </select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div fxLayout="row wrap"style="width:100%;"  fxLayoutAlign="start center " fxLayoutGap="-145px" >
+
+    <!-- <mat-card class="books"   *ngFor="let book of booksArray" fxLayout="column" fxLayoutAlign="space-evenly center"> -->
+
+     <!-- <div class="books-container" style="background-color: aqua; padding: 0px 0px 0px "  fxLayoutAlign="start center" fxLayoutGap="5px">  -->
+         <div  *ngFor="let book of booksArray"  fxLayoutGap="5px" > 
+
+        
+        <div class="book-con"  fxLayout="column" fxLayoutAlign="space-evenly center"  fxLayoutGap="-105px"
+            style=" border: 1px solid gray; border-bottom: 0px;">
+            <div class="img">
+                <img src="../../../assets/Books/Image 36.png" width="105px" height="135px" 
+                    alt="">
+            </div>
+        </div>
+        <div class="details" fxLayout="column" fxLayoutAlign="space-evenly center"
+            style=" border: 1px solid gray; border-top: 0px;">
+            <b class="name-container">
+                {{book.bookName}}
+            </b>
+            <mat-card-subtitle class="authorName">
+                by  {{book.author}}
+            </mat-card-subtitle>
+
+
+            <div fxLayout="row" fxLayoutAlign="start center" class='ratingbox'
+                style="margin-left:-125px; margin-bottom:10px;">
+                <button mat-raised-button style="background-color:#388E3C; border:none; color:#FFFFFF;"
+                    fxLayoutAlign="center center" fxLayoutGap="15px">
+                    4.5<img src="../../../assets/Books/star_white_24dp.svg" height="7.5px" width="7.5px" class="star">
+                </button>  ({{book.quantity}})
+            </div>
+
+            <div style="margin-left:-135px; margin-top: -15px;" fxLayout="row" fxLayoutAlign="space-between center">
+                <span>Rs. {{book.price}}</span>
+            </div>
+        </div>
+
+         </div>
+     </div>
+    <!-- </div> -->
+</div>

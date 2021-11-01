@@ -1,0 +1,42 @@
+
+<link rel="stylesheet" href="./login.component.scss">
+<form class="loginForm"  >
+    <div fxLayout="column" >
+        <div class="email">
+            <span>Email</span>
+            <mat-form-field appearance="outline" class="emailfield">
+                <input matInput placeholder="" />
+                <mat-hint class="error" >Email is required!</mat-hint>
+              </mat-form-field>
+        </div>
+        <div class="Password">
+            <span>Password</span>
+            <mat-form-field appearance="outline" class="emailfield">
+                <input matInput placeholder="" />
+              </mat-form-field>
+              <button class="forgot">forgot password?</button>
+            
+        </div>
+    </div>
+    <div>
+        <button class="loginbutton">Login</button>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around none" >
+        <div>
+            <button class="fb" style="width: 100%; height: 35px; margin-right: 5px;"
+            >Facebook</button>
+        </div>
+        <div>
+            <button class="g" style="width: 100%; height: 35px; margin-left: 5px;"
+            >Google</button>
+        </div>
+
+    </div>
+    
+    
+   
+
+</form>
+
+
+

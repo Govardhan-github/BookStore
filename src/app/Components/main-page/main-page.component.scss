@@ -1,0 +1,52 @@
+
+body{
+    background-color: grey;
+}
+.main-container{
+
+    padding: 52px 200px 90px 53px ;    
+}
+.main-container img{
+    border-radius: 120px;
+}
+.heading{
+    margin-top: 10px;
+    font-size: 10px;
+    margin-left: 20px;
+}
+.container2{
+    padding: 28px 70px 47px 70px;
+    background-color:white;
+    position: relative;
+    margin-top: 0px;
+    margin-left: -170px;
+}
+.button1{
+    margin-top: 5px ;
+    font-size: 20px;
+    background-color: white;
+    border:none;
+    cursor: pointer;
+    &:focus{
+        text-decoration: underline red 7.3px ; 
+    
+    }}
+
+.button2{
+
+    margin-top: 5px ;
+    font-size: 20px;
+    background-color: white;
+    border:none;
+    cursor: pointer;
+}
+.login{
+    position: relative;
+    margin-top: 65px;
+    margin-left: -300px;
+}
+
+.l{
+    position: relative;
+    margin-top: -10px;
+}

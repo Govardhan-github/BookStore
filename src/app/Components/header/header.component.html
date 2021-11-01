@@ -1,0 +1,60 @@
+<div>
+    <link rel="stylesheet" href="./header.component.scss">
+
+    <div class="header-container" style="background-color: #A03037;  width: 1366px;">
+        <link rel="stylesheet" href="./header.component.scss">
+        <div fxLayout="row" style="margin-left: -20px;" >
+            <img src="../../../assets/Dashboard-header/education.svg" height="24px" width="31px" style="margin-left: 160px; margin-top: 16px;" alt="">
+            <div class="heading" style="margin-left: 5px; color: #FFFFFF; margin-top: 17px; font-size: 20px; ">
+                Bookstore
+            </div>
+        </div>
+
+        <div class="center searchBar" fxHide.lt-md fxFlex=40 fxLayout="row" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="container" fxLayoutAlign="center center">
+                <button class="button"
+                    style="height: 13px; width: 13px; border:none ;background: white 0% 0% no-repeat padding-box;left: 510px; margin-top: -10px; position: relative; ">
+                    <mat-icon>search</mat-icon>
+                </button>
+                <input type="text" class="search" placeholder="Search..."
+                    style="background-color: #FCFCFC; width: 490px; border-radius: 7px; opacity: 1; margin-left: 50px; height: 33px;">
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap=78px  style="margin-top: 18px; margin-left: 180px; ">
+            <div class="person-icon" style="margin-top: 18px; margin-left: 180px; ">
+                <img src="../../../assets/Dashboard-header/person_white_24dp.svg" height="16px" width="16px" alt="">
+                <div class="person-icon-head" style="margin-top: -5px; color: #FFFFFF; margin-left: -10px; font-size: 11px;">
+                    Poonam
+                </div>
+            </div>
+            <div class="cart-class" style="margin-top: 18px; margin-left: 90px;">
+                <img src="../../../assets/Dashboard-header/shopping_cart_white_24dp.svg" height="15px" width="15px" alt="">
+                <div class="person-icon-head" style="margin-top: -4px; color: #FFFFFF; margin-left: -3px; font-size: 11px;">
+                    Cart
+                </div>
+            </div>
+    
+        </div>
+        <!-- <div class="person-icon" style="margin-top: 18px; margin-left: 180px; ">
+            <img src="../../../assets/Dashboard-header/person_white_24dp.svg" height="16px" width="16px" alt="">
+            <div class="person-icon-head" style="margin-top: -5px; color: #FFFFFF; margin-left: -10px; font-size: 11px;">
+                Poonam
+            </div>
+        </div>
+        <div class="cart-class" style="margin-top: 18px; margin-left: 90px;">
+            <img src="../../../assets/Dashboard-header/shopping_cart_white_24dp.svg" height="15px" width="15px" alt="">
+            <div class="person-icon-head" style="margin-top: -4px; color: #FFFFFF; margin-left: -3px; font-size: 11px;">
+                Cart
+            </div>
+        </div> -->
+
+
+
+        <div class="search-bar">
+
+        </div>
+
+
+    </div>
+</div>
+<router-outlet></router-outlet>
