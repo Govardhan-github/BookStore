@@ -56,7 +56,7 @@ export class LoginSignUpComponent implements OnInit {
     this.user.loginServices(reqdata).subscribe((response:any)=>{
       console.log("the response",response);
       localStorage.setItem('token',response.result.accessToken);
-      this.router.navigateByUrl('/dashboard/getbooks')
+      this.router.navigateByUrl('/home/getbooks')
 
 
     })

@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div class="con">
+
+
+<div class="home-con" fxLayout="row" style="  font-size: 15px; margin-top: 35px; margin-left: 174px;">
+    <div class="home" style="opacity: 0.5;">
+        Home /
+    </div>
+    <div class="book">
+        <b> My cart({{ cartbooks.length }})
+        </b>
+    </div>
+</div>
+
+<div class="main-container"  fxLayout="column" fxLayoutGap=3px>
+        
+    <!-- CART CONTAINER` -->
+    
+    <div class="cart-con" *ngFor="let getcartbook of cartbooks" style="width:774px; height: 251px;">
+        <div class="cart-head" fxLayout="row">
+            <div class="mycart" style="margin-top: 20px; margin-left: 35px; font-size: 15px;">
+                My cart
+            </div>
+            <div class="location">
+                <div class="sorting-class" style="margin-left: 500px; margin-top: 10px;">
+                    <mat-form-field appearance="outline" style="width: 170px;  height: -20px;">
+                        <select matNativeControl fxLayoutAlign="center center" style="width: 100%;">
+                            <option value="relevence">Use current location</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="book-details-con" fxLayout="row" fxLayoutGap=20px>
+            <div class="book-img">
+                <img src="../../../assets/Books/Image 36.png" style="margin-left: 36px; margin-top: -20px; "
+                    height="85px" width="65px" alt="">
+            </div>
+
+
+            <div class="details-con" style=" height: 85px; width: 150px;">
+                <div fxLayout="column" fxLayoutGap=8px>
+                    <div>
+                        {{ getcartbook.product_id.bookName }}
+                    </div>
+                    <div class="author">
+                        {{ getcartbook.product_id.author }}
+
+                    </div>
+                    <div class="" fxLayout="row">
+                        <div>
+                            <b>                    
+                            {{ getcartbook.product_id.price }}
+                                &nbsp;</b>
+                        </div>
+                        <div style="font-size: 12px;">
+                            <s>Rs.2000</s>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="count-con" fxLayout="row" fxLayoutGap=7px style="margin-top: 10px; margin-left: 118px;">
+            <div>
+                <img src="../../../assets/Books/remove_circle_outline_black_24dp.svg" height="24px" width="24px"
+                    style="cursor: pointer;" alt="">
+            </div>
+            <div>
+                <div class="inputBox" fxLayoutAlign="center center" style="width: 8px; height: 17px; margin-top: 4px;">
+                    <b>1</b>
+                </div>
+            </div>
+            <div>
+                <img src="../../../assets/Books/add_circle_outline_black_24dp.svg" height="24px" width="24px"
+                    style="cursor: pointer;" alt="">
+            </div>
+            <div>
+                <button matTooltip="Delete" class="remove-button"> Remove</button>
+            </div>
+        </div>
+        <div>
+            <button class="order-button">Place Order</button>
+        </div>
+    </div>
+
+    <div class="address-details" style="width:774px; height: 60px;">
+        <div class="head">
+            Address Details
+        </div>
+    </div>
+
+
+    <div class="order-details" style="width:774px; height: 60px;">
+        <div class="head">
+            Order Summary
+        </div>
+    </div>
+
+</div>
+</div>
+<!-- <app-footer style="margin-top: 968px;" class="footer"></app-footer> -->

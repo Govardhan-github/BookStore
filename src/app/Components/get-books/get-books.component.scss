@@ -45,3 +45,22 @@
     height: 16px;
     width: 63px;
 }
+
+.pagination a {
+    margin-top:90px;
+    color: rgb(212, 201, 201);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+    background-color: #A03037;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .footer{
+      margin-top: 700px;
+  }

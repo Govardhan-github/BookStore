@@ -24,13 +24,16 @@ export class GetBooksComponent implements OnInit {
 
     this.bookServices.getBooksService().subscribe(
       (response: any) => { 
-        
         console.log(response.result)
-        
         this.booksArray=response['result'];
-
         console.log("getBooksArray",this.booksArray);
 
       })
+  }
+
+  quickView(book: any) {
+    console.log(book._id);
+
+    localStorage.setItem('bookId', book._id);
   }
 }

@@ -30,6 +30,10 @@ import { LoginSignUpComponent } from './Components/login-sign-up/login-sign-up.c
 import { HeaderComponent } from './Components/header/header.component';
 import { GetBooksComponent } from './Components/get-books/get-books.component';
 import { BookDetailsComponent } from './Components/book-details/book-details.component';
+import { FooterComponent } from './Components/Footer/footer/footer.component';
+import { CartComponent } from './Components/cart/cart.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { WishlistComponent } from './Components/wishlist/wishlist.component';
 
 
 
@@ -45,7 +49,10 @@ import { BookDetailsComponent } from './Components/book-details/book-details.com
     LoginSignUpComponent,
          HeaderComponent,
          GetBooksComponent,
-         BookDetailsComponent
+         BookDetailsComponent,
+         FooterComponent,
+         CartComponent,
+         WishlistComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +79,8 @@ import { BookDetailsComponent } from './Components/book-details/book-details.com
     MatListModule,
     MatMenuModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSnackBarModule
 
   ],
   providers: [],

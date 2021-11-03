@@ -1,0 +1,57 @@
+.con{
+    width: 1366px;
+    height: 768px;
+}
+.cart-con{
+    border: 1px solid gray;
+    
+    margin-left: 177px;
+    margin-top: 25px;
+}
+.location{
+    width: 550px;
+}
+.details-con{
+    margin-top: -20px;
+}
+.author{
+    opacity: 0.5;
+    font-size: 13px;
+}
+.remove-button{
+    width: 55px;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 3px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.order-button{
+    float: right;
+    margin-right: 25px;
+    height: 35px;
+    width: 151px;
+    border: none;
+    background-color: royalblue;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.address-details{
+    margin-left: 177px;
+    margin-top: 25px;
+    border: 1px solid gray;
+}
+.head{
+    margin-top: 20px;
+    margin-left: 36px;
+    width: 250px;
+}
+.order-details{
+    margin-left: 177px;
+    margin-top: 25px;
+    border: 1px solid gray;
+
+}

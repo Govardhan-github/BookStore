@@ -1,1 +1,133 @@
-<p>book-details works!</p>
+<app-header></app-header>
+
+<div class="home-con" fxLayout="row" style=" font-size: 15px; margin-top: 45px; margin-left: 174px;">
+    <div class="home" routerLink='/home/getbooks' style="opacity: 0.5; cursor: pointer;">
+        Home
+    </div>
+    <div class="book">
+        <b>/Books({{01}})</b>
+    </div>
+</div>
+<!-- 
+
+<div fxLayout="column" style="position: relative; margin-top: 50px;"  >
+    <div class="">
+        <img src="../../../assets/Books/Image 36.png" height="44px" width="35px" alt="">
+    </div>
+    <div>
+        <img src="../../../assets/Books/Image 46/Image 46.png" height="44px" width="35px"   alt="">
+    </div>
+
+</div> -->
+<div style="margin-left: -130px; top: -50pxx;" class="main-container" fxLayout="row wrap" fxLayoutAlign="center none" fxLayout.xs="column">
+    <!-- <div class="sideBooks" fxLayout.xs="row">
+        <div class="book1">
+            <img src="../../../assets/Books/Image 46/Image 46.png" height="44px" width="35px" alt="" style="border: 1px solid #7c1e1e; padding: 5px"/>
+        </div>
+        <div class="book2">
+            <img src="../../../assets/Books/Image 36.png" height="44px" width="35px" alt="" style="border: 1px solid #7c1e1e; padding: 5px"/>
+        </div>
+</div> -->
+
+
+<div style="margin-left:40px; margin-top: -25px;" fxLayout="row" fxLayoutAlign="space none" fxLayoutGap="30px">
+   
+    <div class="main-container" fxLayout="column" fxLayoutAlign="space none" fxLayoutGap="10px"
+        style=" width: 400px; height: 585px; ">
+        <div class="book-image" fxLayoutAlign="space-evenly centre">
+            <div class="imge">
+                <img src="../../../assets/Books/Image 36.png" height="400px" width="300px" alt="">
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space" fxLayoutGap="20px">
+            <button class="addtag" (click)="addToCart()" >ADD TO BAG</button>
+            <button  (click)="addwishlist()" class="wishlist">
+                <img src="../../../assets/Books/favorite_white_24dp.svg" class="fav-img"
+                    style="margin-left: -120px; height: 20px;" alt="">
+                <div class="wish">
+                    WISHLIST
+                </div>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="rightside-con" fxLayout="column" fxLayoutGap="00px" fxLayoutAlign="space none"
+        style=" height: 650px; width: 600px; ">
+        <div class="book-name">
+            <h1 style="font-size: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> {{ booksdata?.bookName }} </h1>
+        </div>
+        <div class="author">
+            <h3 style="font-size: 20px; opacity: 0.5; "> {{ booksdata?.author }}</h3>
+        </div>
+
+        <div fxLayout="row" fxLayoutAling="space none" fxLayoutGap=5px>
+            <button mat-raised-button
+                style="background-color:#388E3C; width: 70px; height: 30px; font-size: 18px; border:none; border-radius: 3px; color:#FFFFFF;">
+                4.5<img src="../../../assets/Books/star_white_24dp.svg" height="10px" width="10px" class="star">
+            </button>
+            <div style="font-size: 18px; margin-top: 10px;">
+                &nbsp; (20)
+            </div>
+
+        </div><br>
+
+        <div fxLayout="row" fxLayoutAling="space none" fxLayoutGap=10px>
+            <h1><b>Rs. {{ booksdata?.price }}</b></h1>
+            <h3 class="original-price">
+                <sub><s>Rs.3500</s></sub>
+            </h3>
+        </div>
+        <div>
+            <hr>
+        </div><br>
+        <div class="book-details" fxLayout="column" fxLayoutAlign="space-evenly start" fxLayoutGap=10px>
+            <div>
+                <li style="opacity: 0.5; margin-top: -20px;">Book Details</li><br>
+            </div>
+            <div>
+                <p>
+                 Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam noumy eirmod tempor invindut utlabore et dolore magna aliquyam erat ,sed diam voluputa.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita ksad gubegren,no sea takimata snactus est Lorem ipsum dolor sit amet.Lorem ipsum dolor dit amet .conseteur sadispicing elitr,sed diam mounmy eirmod tempor.   
+
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <hr>
+        </div>
+        <div fxlayout="column" >
+            <div >
+                <h2>Customer Feedback</h2>
+            </div>
+            <div class="feedback-con" style="height: 192px; width: 599px; background-color: #E4E4E4; opacity: 0.8; border-radius: 5px; ">
+                <div fxLayout="column" >
+                    <div style="margin-top: 5px;">
+                        Overall Rating
+                    </div>
+                    <div fxLayout="row" fxLayoutGap=10px >
+                        <img src="../../../assets/Books/star_white_24dp.svg" alt="">
+                        <img src="../../../assets/Books/star_white_24dp.svg" alt="">
+                        <img src="../../../assets/Books/star_white_24dp.svg" alt="">
+                        <img src="../../../assets/Books/star_white_24dp.svg" alt="">
+                        <img src="../../../assets/Books/star_white_24dp.svg" alt="">
+                    </div>
+                    <div fxLayout="column" fxLayoutGap="20px">
+                        <div class="review-con" style="opacity: 0.8;">
+                            <!-- <input placeholder="Write Your Review" style=" width:250px "> -->
+                            Write your Review
+                        </div>
+                        <div>
+                            <button class="submit-button">Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

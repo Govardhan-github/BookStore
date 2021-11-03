@@ -1,4 +1,4 @@
-<div class="main-container" style="width: 1266px; height: 1106px; ">
+<div class="main-container" style="width: 1266px; height: 1506px; ">
     <div fxLayout="row" fxLayoutAlign="space-between center">
         <div class="head1">
             <span style="width: 73px; height: 33px; font-size: 20px; margin-left: 174px;">Books({{booksArray.length}})</span>
@@ -23,10 +23,10 @@
          <div  *ngFor="let book of booksArray"  fxLayoutGap="5px" > 
 
         
-        <div class="book-con"  fxLayout="column" fxLayoutAlign="space-evenly center"  fxLayoutGap="-105px"
-            style=" border: 1px solid gray; border-bottom: 0px;">
-            <div class="img">
-                <img src="../../../assets/Books/Image 36.png" width="105px" height="135px" 
+        <div class="book-con" (click)="quickView(book)"  routerLink='/details' matTooltip="quickView" fxLayout="column" fxLayoutAlign="space-evenly center"  fxLayoutGap="-105px"
+            style=" border: 1px solid gray; border-bottom: 0px; cursor: pointer;">
+            <div class="img"  style="cursor: pointer; "> 
+                <img src="../../../assets/Books/Image 36.png" routerLink='/details' width="105px" height="135px" 
                     alt="">
             </div>
         </div>
@@ -55,5 +55,16 @@
 
          </div>
      </div>
-    <!-- </div> -->
+     <div class="pagination" style="  text-align: center; margin-left: 411px;">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
 </div>
+<app-footer class="footer"></app-footer> 

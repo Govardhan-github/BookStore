@@ -1,0 +1,25 @@
+.main-container{
+    margin-left: 177px;
+    margin-top: 25px;
+}
+.my-wishlist-head{
+    margin-top: 18px;
+    margin-left: 45px;
+    font-size: 18px;
+}
+.book-img{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.book-details{
+    margin-top: 42px;
+}
+.delete-con{
+    margin-top: 40px;
+    margin-left: 520px;
+    cursor: pointer;
+    &:visited{
+        background-color: gray;
+    }
+
+}

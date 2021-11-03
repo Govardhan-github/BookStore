@@ -16,13 +16,11 @@ export class HttpService {
    return this.http.post(this.url + url , data,token && headers)
   }
 
-  Get(url: string='',token: boolean = false, headers:any){
+  Get(url: string='', headers:any=null){
 
-    console.log(url);
-    console.log(headers);
-    console.log(token);
+   
 
-    return this.http.get(this.url+url, token && headers);
+    return this.http.get(this.url+url,  headers);
    }
 
 }

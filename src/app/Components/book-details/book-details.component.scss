@@ -1,0 +1,64 @@
+.main-container{
+    margin-left: 217px;
+    margin-top: 25px;
+}
+.book-image{
+
+    height: 450px;
+    width: 400px;
+    margin-left:0px;
+    border: 1px solid gray; 
+}
+.imge{
+    padding: 25px 10px 10px 10px;
+}
+.addtag{
+    height: 40px;
+    width: 190px;
+    border: none;
+    border-radius: 5px;
+    background-color:#A03037;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+.wishlist{
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    width: 190px;
+}
+.wish{
+    position: relative;
+    margin-top: -21px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.rightside-con{
+    margin-top: 25px;
+    
+}
+.review-con{
+    height: 63px; 
+    width: 567px;
+    margin-left: 14px; 
+    margin-top: 25px;
+    margin-right: 25px;
+    background-color: white;
+    border-radius: 4px;
+}
+.submit-button{
+    float: right;
+    margin-right: 20px;
+    border: none;
+    color:  #FFFFFF;
+    background-color: #3371B5;
+    
+    border-radius: 7px;
+    width: 70px;
+    height: 25px;
+}
