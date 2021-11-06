@@ -61,6 +61,15 @@ export class BookService {
 
   }
 
+  getWishListService(){
+    let options={
+      headers : new HttpHeaders({
+        'Content-type' : 'application/json',
+        'x-access-token' : this.token
+      })
+    }
+    return this.http.Get('/bookstore_user/get_wishlist_items' , options)
+  }
 
 }
 
