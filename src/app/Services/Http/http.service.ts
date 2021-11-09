@@ -17,10 +17,16 @@ export class HttpService {
   }
 
   Get(url: string='', headers:any=null){
-
-   
-
     return this.http.get(this.url+url,  headers);
    }
+
+   Delete(url:any,headers:any){
+     return this.http.delete(this.url+url,headers)
+   }
+
+   Put(url:any,data:any,headers:any){
+     return this.http.put(this.url + url,data,headers)
+   }
+
 
 }

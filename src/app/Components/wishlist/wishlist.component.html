@@ -1,6 +1,6 @@
-<app-header></app-header>
-<div class="con">
-    <div class="home-con" fxLayout="row" style="  font-size: 15px; margin-top: 35px; margin-left: 174px;">
+<!-- <app-header></app-header> -->
+<div class="con" fxLayout='column' fxFlex.xs=100>
+    <div class="home-con" fxLayout="row" fxLayoutAlign.xs="start" >
         <div class="home" routerLink='/home/getbooks' style="opacity: 0.5; cursor: pointer;">
             Home /
         </div>
@@ -12,18 +12,19 @@
 
 
 
-    <div class="main-container" fxLayout="column" >
-        <div class="mywish-head-con"  style=" height: 55px; width: 950px; background-color: lightgrey; border: 1px solid lightgrey ;">
+    <div class="main-container" fxLayout="column">
+        <div class="mywish-head-con">
             <div class="my-wishlist-head">
-                <b>My Wish List(2)</b>
+                <b>My Wish List<i>({{wishList.length}})</i></b>
             </div>
         </div>
 
-        <div class="wishlist-con" *ngFor="let book of wishList" fxLayout="row" fxLayoutGap="25px" style=" width: 950px; height: 175px; border: 1px solid lightgrey">
+        <div class="wishlist-con" *ngFor="let book of wishList" fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="-25px" fxLayoutGap="25px">
+
             <div class="book-img" style="width: 75px; height: 85px; ">
                 <img src="../../../assets/Books/Image 36.png" width="65px" height="85px" alt="">
             </div>
-            <div class="book-details" fxLayout="column" fxLayoutGap=5px style="width: 200px; height: 85px; ">
+            <div class="book-details" fxLayout="column" fxLayoutGap=5px >
                 <div class="book-title">
                     <span style="font-size: 17px;">{{book.product_id.bookName}}</span>
                 </div>
@@ -39,10 +40,11 @@
                     </div>
                 </div>
             </div>
-            <div class="delete-con">
-                <img src="../../../assets/Books/delete_black_24dp.svg" alt="">
+            <div class="delete-con" fxHide.xs fxLayoutAlign.xs="start">
+                <img src="../../../assets/Books/delete_black_24dp.svg" (click)="Delete(book)" alt="">
             </div>
         </div>
 
 
     </div>
+</div>

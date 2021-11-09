@@ -2,6 +2,20 @@
     margin-left: 177px;
     margin-top: 25px;
 }
+.home-con{
+    font-size: 15px; margin-top: 35px; margin-left: 174px;
+}
+.mywish-head-con{
+    height: 55px;
+     width: 950px; 
+     background-color: lightgrey;
+      border: 1px solid lightgrey ;
+}
+.wishlist-con{
+    width: 950px;
+     height: 175px;
+      border: 1px solid lightgrey;
+}
 .my-wishlist-head{
     margin-top: 18px;
     margin-left: 45px;
@@ -12,6 +26,7 @@
     margin-top: 40px;
 }
 .book-details{
+    width: 200px; height: 85px;
     margin-top: 42px;
 }
 .delete-con{
@@ -22,4 +37,31 @@
         background-color: gray;
     }
 
+}
+@media only screen and (max-width: 599px) {
+    .con{
+        width: 100%;
+    }
+    .home-con{
+        margin-left: 60px;
+    }
+    .main-container{
+        width: 100%;
+        border: none;
+        margin-left: 40px;
+
+    }
+    .mywish-head-con{
+        width: 100%;
+        border: none;
+        margin-left: 0px;
+    }
+    .wishlist-con{
+        width: 100%;
+        border: none;
+    }
+    .delete-con{
+        margin-left: 270px;
+        margin-top: -70px;
+    }
 }

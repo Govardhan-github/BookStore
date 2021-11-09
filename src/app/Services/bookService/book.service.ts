@@ -19,7 +19,6 @@ export class BookService {
         'Authorization': this.token
       })
     };
-    console.log(httpAuthOptions);
 
     return this.http.Get('/bookstore_user/get/book', httpAuthOptions);
   }
@@ -32,13 +31,13 @@ export class BookService {
         'x-access-token': this.token
       })
     };
-    console.log(httpAuthOptions);
-    console.log("the id", data);
+   
 
     return this.http.Post(`/bookstore_user/add_cart_item/${data.product_id}`, data, true, httpAuthOptions);
   }
 
   getCartItemsService() {
+    this.token = localStorage.getItem('token')
     let httpAuthOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -62,6 +61,7 @@ export class BookService {
   }
 
   getWishListService(){
+    this.token = localStorage.getItem('token')
     let options={
       headers : new HttpHeaders({
         'Content-type' : 'application/json',
@@ -69,6 +69,42 @@ export class BookService {
       })
     }
     return this.http.Get('/bookstore_user/get_wishlist_items' , options)
+  }
+
+  removeFromCartServices(data:any){
+    this.token = localStorage.getItem('token')
+    let options={
+      headers : new HttpHeaders({
+        'Content-type' : 'application/json',
+        'x-access-token' : this.token
+      })
+    }
+    return this.http.Delete(`/bookstore_user/remove_cart_item/${data._id}`,options)
+  }
+
+
+  DeleteFromWishList(data:any){
+    this.token = localStorage.getItem('token')
+    let options={
+      headers : new HttpHeaders({
+        'Content-type' : 'application/json',
+        'x-access-token' : this.token
+      })
+    }
+    return this.http.Delete(`/bookstore_user/remove_wishlist_item/${data.product_id._id
+    }`,options)
+  }
+
+  customerDetailsService(data:any){
+    this.token = localStorage.getItem('token')
+    let options={
+      headers : new HttpHeaders({
+        'Content-type' : 'application/json',
+        'x-access-token' : this.token
+      })
+    }
+    return this.http.Put('/bookstore_user/edit_user',data,options)
+
   }
 
 }

@@ -2,16 +2,25 @@
     width: 1366px;
     height: 768px;
 }
+.home-con{
+    font-size: 15px; margin-top: 35px; margin-left: 174px;
+
+}
 .cart-con{
+    width:774px; height: 251px;
     border: 1px solid gray;
     margin-left: 177px;
     margin-top: 25px;
+}
+.mycart{
+    margin-top: 20px; margin-left: 35px; font-size: 15px;
 }
 .location{
     width: 550px;
 }
 .details-con{
     margin-top: -20px;
+    height: 85px; width: 150px;
 }
 .author{
     opacity: 0.5;
@@ -39,18 +48,139 @@
     cursor: pointer;
 }
 .address-details{
+    width:774px; height: 60px;
     margin-left: 177px;
     margin-top: 25px;
     border: 1px solid gray;
+}
+.new-address-button{
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color:royalblue ;
+    color: white;
 }
 .head{
     margin-top: 20px;
     margin-left: 36px;
     width: 250px;
 }
+.count-con{
+    margin-top: 10px; margin-left: 118px
+}
 .order-details{
+    width:774px; height: 60px;
     margin-left: 177px;
     margin-top: 25px;
     border: 1px solid gray;
+}
+
+.customer-details{
+    width: 774px; height: 486px;
+    margin-left: 177px;
+    border: 1px solid gray;
+}
+
+.details-con{
+    height: 85px; width: 150px;
+}
+
+.fullname{
+    margin-left: 100px;
+}
+.input-field{
+    width: 250px;
+    
+}
+.input-address{
+    width: 530px;
+}
+.continue-btn{
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color:royalblue ;
+    color: white;
+}
+.order-summary{
+    width: 774px; height: 237px;
+    margin-left: 177px;
+    border: 1px solid gray;
+
+}
+.checkout-btn{
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color:royalblue ;
+    color: white;
+
+}
+
+@media only screen and (max-width: 599px) {
+    .con{
+        width: 100%
+    }
+    .home-con{
+        margin-left: 60px;
+    }
+    .cart-con{
+        display: flex;
+        flex-direction: column;
+        margin-left: 70px;
+        width: 70%;
+        height: 100%;
+        border: none;
+      }
+      .count-con{
+          
+        margin-left: 0px;
+      }
+      .order-button{
+          
+      }
+      .address-details{
+        width: 70%;
+        margin-left: 65px;
+        
+      }
+      .customer-details{
+          border: none;
+        margin-left: -40px;
+        width: 100%;
+        height: 100%;
+      }
+      .input-address{
+          width: 100%;
+      }
+      .order-details{
+        width: 70%;
+        margin-left: 65px;
+      }
+
+      .order-summary{
+          border: none;
+        margin-left: 10px;
+        width: 100%;
+        height: 100%;
+      }
+     
+     .order{
+       margin-top: 20px;
+       margin-left: 160px;
+     }
+     .address{
+       width: 138%;
+       margin-left: -65px;
+     }
+     .container{
+       margin-right: 20px;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+     }
+     .home{
+       margin-left: -40px;
+     }
 
 }

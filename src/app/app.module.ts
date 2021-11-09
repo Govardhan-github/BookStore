@@ -34,6 +34,9 @@ import { FooterComponent } from './Components/Footer/footer/footer.component';
 import { CartComponent } from './Components/cart/cart.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { PlaceOrderComponent } from './Components/place-order/place-order.component';
+
 
 
 
@@ -52,7 +55,8 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
          BookDetailsComponent,
          FooterComponent,
          CartComponent,
-         WishlistComponent
+         WishlistComponent,
+         PlaceOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,7 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
     MatMenuModule,
     MatDividerModule,
     MatTabsModule,
-    MatSnackBarModule
+    MatSnackBarModule,MatRadioModule
 
   ],
   providers: [],
