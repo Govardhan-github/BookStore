@@ -11,8 +11,14 @@ import { BookService } from 'src/app/Services/bookService/book.service';
 export class BookDetailsComponent implements OnInit {
 
   booksdata: any;
-  bookArray: any;
+  booksArray: any;
   bookid: any;
+  displayCount=true;
+  value : any
+  comment : any
+  product_id:any
+   orderCount = 0;
+
 
 
   constructor(private bookservice: BookService, private router: Router, private snackBar: MatSnackBar) {
@@ -22,7 +28,16 @@ export class BookDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.bookid = localStorage.getItem('bookId')
     this.getData();
+   this.getFeedBack();
+    
 
+  }
+
+  submit(){
+    console.log('v',this.value);
+    console.log('c',this.comment);
+    console.log(this.booksdata._id);
+    
   }
 
   getData() {
@@ -38,6 +53,7 @@ export class BookDetailsComponent implements OnInit {
 
   }
   addToCart() {
+    this.displayCount=false;
     let data = {
       product_id: this.bookid
     }
@@ -57,6 +73,58 @@ export class BookDetailsComponent implements OnInit {
       this.snackBar.open('Book Added To Wishlist' , 'close')._dismissAfter(2000);
       
     })
+  }
+  countincrease() {
+    this.orderCount += 1
+    this.updateCount()
+  }
+
+  countdecrease() {
+    if (this.orderCount > 0) {
+      this.orderCount -= 1;
+      this.updateCount()
+    }
+    else {
+      return;
+    }
+  }
+  updateCount() {
+    let payload = {
+      "quantityToBuy": this.orderCount,
+      product_id : this.bookid
+
+    }
+    this.bookservice.updateitemcount( payload).subscribe((response) => {
+       console.log(response) },
+  
+      (error) => console.log(error)
+    )
+  }
+
+  addFeedback(){
+    let data={
+      rating:this.value,
+      comment:this.comment,
+      product_id : this.bookid
+
+    }
+    this.bookservice.addFeedbackService(data).subscribe((response:any)=>{
+      console.log("the response" ,response);
+      this.snackBar.open("Feedback Added Successfully",'close')._dismissAfter(2000)
+      
+    })
+
+  }
+
+  getFeedBack(){
+    let data={
+      product_id : this.bookid
+    }
+    this.bookservice.getFeedBackService(data).subscribe((response:any)=>{
+      console.log("the response" ,response);
+      this.booksArray = response.result;
+      
+    });
   }
 }
 

@@ -107,6 +107,44 @@ export class BookService {
 
   }
 
+  addFeedbackService(data:any){
+    this.token = localStorage.getItem('token')
+    let options={
+      headers : new HttpHeaders({
+        'Content-type' : 'application/json',
+        'x-access-token' : this.token
+      })
+    }
+    return this.http.Post(`/bookstore_user/add/feedback/${data.product_id}`,data,true,options)
+
+  }
+  updateitemcount( payload: any) {
+    console.log('added', payload);
+
+    let headers = {
+      headers: new HttpHeaders({
+        'x-access-token': this.token,
+        'content-Type': 'application/json'
+      })
+    }
+    return this.http.Put(`/bookstore_user/cart_item_quantity/${payload.product_id}`, payload, headers);
+  }
+
+  getFeedBackService(data:any){
+    this.token = localStorage.getItem('token')
+    let options={
+      headers : new HttpHeaders({
+        'Content-type' : 'application/json',
+        'x-access-token' : this.token
+      })
+    }
+    return this.http.Get(`/bookstore_user/get/feedback/${data.product_id}`,options)
+
+
+  }
+
+
+
 }
 
 

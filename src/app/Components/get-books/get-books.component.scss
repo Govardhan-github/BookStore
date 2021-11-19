@@ -1,4 +1,10 @@
+.main-container{
+  width: 1266px;
+   height: 1506px;
+}
+
 .sorting-class{
+  position: relative;
     width: 130px;
     height: 10px;
     padding-right: 135px;
@@ -64,15 +70,45 @@
   .footer{
       margin-top: 700px;
   }
+  //-------------------------------------
+
+  .medium-book-con {
+    margin-left: 100px;
+    // margin-right: 40px;
+  }
+
+  .small-book{
+    margin-left: -65px;
+
+  }
+
+  .medium-name-container {
+    margin-left: -55px;
+  }
+
+  .small-name-container {
+    margin-left: -55px;
+
+  }
+  
+  .medium-authorName {
+    margin-left: -125px;
+  }
+
+  .small-authorName {
+    margin-left: -125px;
+
+  }
+  .sort-book{
+    margin-left: -1550px;
+  }
 
   @media only screen and (max-width: 599px){
+    .sorting-class{
+      margin-left: -1150px;
+    }
     .main-container{
-      margin-left: 50px;
-    }
-    .books{
-      margin-left: 45px;
-    }
-    .mat-form-field{
-      margin-left: 30px;
+      width: 100%;
+      
     }
   }

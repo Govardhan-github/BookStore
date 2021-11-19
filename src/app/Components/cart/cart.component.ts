@@ -12,6 +12,7 @@ import { BookService } from 'src/app/Services/bookService/book.service';
 export class CartComponent implements OnInit {
   bookid: any;
   cartbooks: any;
+  address:any
   token: any;
   getcartbook:any;
   displayButton=true;
@@ -45,6 +46,8 @@ export class CartComponent implements OnInit {
       console.log("the get", response);
       this.cartbooks = response.result;
       console.log("returning data", this.cartbooks);
+      
+      
     })
   }
 
@@ -72,7 +75,10 @@ export class CartComponent implements OnInit {
     }
     this.bookservice.customerDetailsService(reqData).subscribe((response:any)=>{
       console.log("the api" , response);
-      
+       localStorage.setItem("address",response.result.address.addressType)
+       let b = localStorage.getItem(response.result.address)
+       console.log(b);
+       
     })
     
   }

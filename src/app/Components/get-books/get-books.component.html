@@ -1,10 +1,13 @@
-<div class="main-container" style="width: 1266px; height: 1506px; ">
+<div class="main-container"  >
     <div fxLayout="row" fxLayoutAlign="space-between center" class="books">
         <div class="head1">
-            <span style="width: 73px; height: 33px; font-size: 20px; margin-left: 174px;">Books({{booksArray.length}})</span>
+            <span style="width: 73px; height: 33px; font-size: 20px; margin-left: 174px;"
+            fxLayout="row" fxLayoutAlign=" none" [ngStyle.sm]="{'margin-left':'30px'}"
+            [ngStyle.xs]="{'margin-left':'10px'}">Books({{booksArray.length}})</span>
         </div>
-        <div class="sorting-class">
-            <mat-form-field appearance="outline" style="width: 150px; height: 20px;">
+        <div class="sorting-class" fxHide.xs [ngStyle.sm]="{'margin-right':'30px'}" [ngClass.xs]="'sort-book'"
+        style="margin-top: -25px;">
+            <mat-form-field appearance="outline" style="width: 150px; height: 20px;" >
                 <select matNativeControl fxLayoutAlign="center center" style="width: 100%;">
                     <option value="relevence">Sort by relevence</option>
                     <option value="L2H">Price: Low to High</option>
@@ -15,27 +18,29 @@
         </div>
     </div>
 
-    <div fxLayout="row wrap"style="width:100%;"  fxLayoutAlign="start center " fxLayoutGap="-145px" >
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap.xs="15px" [ngClass.xs]="'small-book'"style="width:100%;"  fxLayoutAlign="start center " fxLayoutGap="-145px" >
 
     <!-- <mat-card class="books"   *ngFor="let book of booksArray" fxLayout="column" fxLayoutAlign="space-evenly center"> -->
 
      <!-- <div class="books-container" style="background-color: aqua; padding: 0px 0px 0px "  fxLayoutAlign="start center" fxLayoutGap="5px">  -->
-         <div  *ngFor="let book of booksArray"  fxLayoutGap="5px" > 
+         <div  *ngFor="let book of booksArray"  fxLayoutGap="5px"  fxLayoutGap.md="40px" fxLayoutGap.sm="100px" fxLayoutGap.xs="60px"
+         [ngClass.sm]="'medium-book-con'"  > 
 
         
-        <div class="book-con" (click)="quickView(book)"  routerLink='/details' matTooltip="quickView" fxLayout="column" fxLayoutAlign="space-evenly center"  fxLayoutGap="-105px"
+        <div class="book-con"  [ngClass.xs]="'small-book-con'" (click)="quickView(book)"  routerLink='/home/Details' matTooltip="quickView" fxLayout="column" fxLayoutAlign="space-evenly center"  fxLayoutGap="-105px"
             style=" border: 1px solid gray; border-bottom: 0px; cursor: pointer;">
             <div class="img"  style="cursor: pointer; "> 
-                <img src="../../../assets/Books/Image 36.png" routerLink='/details' width="105px" height="135px" 
+                <img src="../../../assets/Books/Image 36.png" routerLink='/home/Details' width="105px" height="135px" 
                     alt="">
             </div>
         </div>
         <div class="details" fxLayout="column" fxLayoutAlign="space-evenly center"
             style=" border: 1px solid gray; border-top: 0px;">
-            <b class="name-container">
+            <b class="name-container"  [ngClass.xs]="'small-name-container'" [ngClass.sm]="'medium-name-container'">
                 {{book.bookName}}
             </b>
-            <mat-card-subtitle class="authorName">
+            <mat-card-subtitle class="authorName" [ngClass.xs]="'small-authorName'"
+            [ngClass.sm]="'medium-authorName'">
                 by  {{book.author}}
             </mat-card-subtitle>
 
@@ -44,7 +49,7 @@
                 style="margin-left:-125px; margin-bottom:10px;">
                 <button mat-raised-button style="background-color:#388E3C; border:none; color:#FFFFFF;"
                     fxLayoutAlign="center center" fxLayoutGap="15px">
-                    4.5<img src="../../../assets/Books/star_white_24dp.svg" height="7.5px" width="7.5px" class="star">
+                    4.5 <img src="../../../assets/Books/star_white_24dp.svg" height="7.5px" width="7.5px" class="star">&nbsp;
                 </button>  ({{book.quantity}})
             </div>
 
@@ -55,7 +60,7 @@
 
          </div>
      </div>
-     <div class="pagination" style="  text-align: center; margin-left: 411px;">
+     <div class="pagination" fxHide.lt-md style="  text-align: center; margin-left: 411px;">
         <a href="#">&laquo;</a>
         <a class="active" href="#">1</a>
         <a href="#">2</a>
@@ -67,4 +72,4 @@
       </div>
 
 </div>
-<app-footer class="footer"></app-footer> 
+<!-- <app-footer class="footer"></app-footer>  -->

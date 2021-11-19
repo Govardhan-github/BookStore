@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup ,FormBuilder,Validators} from '@angular/forms';
 import { UserService } from 'src/app/Services/User/user.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-sign-up',
@@ -18,7 +19,7 @@ export class LoginSignUpComponent implements OnInit {
 
 
   
-  constructor( private formbuilder: FormBuilder , private user : UserService,private router : Router) { }
+  constructor( private formbuilder: FormBuilder , private user : UserService,private router : Router,private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.loginForm=this.formbuilder.group({
@@ -45,7 +46,7 @@ export class LoginSignUpComponent implements OnInit {
  
   onLogin(){
     this.loginSubmitted=true;
-    alert('successs ' + JSON.stringify(this.loginForm.value, null, 4))
+    // alert('successs ' + JSON.stringify(this.loginForm.value, null, 4))
     console.log(this.loginForm.value);
 
     let reqdata={
@@ -53,13 +54,19 @@ export class LoginSignUpComponent implements OnInit {
       password : this.loginForm.value.password
     }
 
-    this.user.loginServices(reqdata).subscribe((response:any)=>{
-      console.log("the response",response);
-      localStorage.setItem('token',response.result.accessToken);
-      this.router.navigateByUrl('/home/getbooks')
+    if(this.loginForm.valid){
+      this.user.loginServices(reqdata).subscribe((response:any)=>{
+        console.log("the response",response);
+        this.snackBar.open("Login Successfully",'close')._dismissAfter(3000)
+        localStorage.setItem('token',response.result.accessToken);
+        this.router.navigateByUrl('/home/getbooks')
+      })
 
+      }
+    else{
+      this.snackBar.open("Login failed , Please enter your valid details",'close')._dismissAfter(3000)
 
-    })
+    }
 
   }
 
@@ -77,9 +84,13 @@ export class LoginSignUpComponent implements OnInit {
 
     this.user.registerServices(reqpayload).subscribe((response:any)=>{
       console.log("the rsposne" , response);
+
       
     })
+
+
   }
+ 
 
 }
 

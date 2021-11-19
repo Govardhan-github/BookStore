@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from 'src/app/Services/bookService/book.service';
+import { DataService } from 'src/app/Services/DataService/data.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -11,10 +12,14 @@ export class WishlistComponent implements OnInit {
   wishList:any;
   bookid: any;
   token: any;
-  constructor(private bookService : BookService,private router :  Router) { }
+  constructor(private bookService : BookService, private dataservice : DataService, private router :  Router) { }
 
   ngOnInit(): void {
-    this.getWishList();
+    this.dataservice.recevieData.subscribe((response:any)=>{
+        this.getWishList();})
+    // this.token = localStorage.getItem('token')
+    // this.getWishList();
+    // console.log(this.activatedRoute.wishList);
   }
 
   getWishList(){
@@ -34,7 +39,5 @@ export class WishlistComponent implements OnInit {
       
     })
   }
-
-
 
 }

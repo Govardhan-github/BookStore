@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  matBadgeHidden: boolean= true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  hide() {
+    this.matBadgeHidden= true;
+    }
+  
 }

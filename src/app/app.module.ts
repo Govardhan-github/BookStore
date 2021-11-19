@@ -36,6 +36,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { PlaceOrderComponent } from './Components/place-order/place-order.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { MyProfileComponent } from './Components/my-profile/my-profile.component';
+
 
 
 
@@ -56,7 +59,8 @@ import { PlaceOrderComponent } from './Components/place-order/place-order.compon
          FooterComponent,
          CartComponent,
          WishlistComponent,
-         PlaceOrderComponent
+         PlaceOrderComponent,
+         MyProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +88,8 @@ import { PlaceOrderComponent } from './Components/place-order/place-order.compon
     MatMenuModule,
     MatDividerModule,
     MatTabsModule,
-    MatSnackBarModule,MatRadioModule
+    MatSnackBarModule,MatRadioModule,
+    MatBadgeModule
 
   ],
   providers: [],

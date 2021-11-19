@@ -1,0 +1,125 @@
+<form>
+    <div class="form-con" fxLayout="column">
+        <div class="home-profile" fxLayout="row">
+            <div class="home">
+                Home /
+            </div>
+            <div class="profile">
+                <b>Profile</b>
+            </div>
+        </div>
+        <div fxLayout="column" class="personal-details-from">
+            <div class="personal-details" fxLayout="row" fxLayoutGap="10px">
+                <div class="personal-details-heading">
+                    <h2>Personal Details</h2>
+                </div>
+                <div class="edit">
+                    <sub>Edit</sub>
+                </div>
+            </div>
+            <div fxLayout="column" fxLayoutGap=-10px>
+                <div fxLayout="column" class="fullname">
+                    <label>Full Name</label>
+                    <mat-form-field appearance="outline" class="input-field">
+                        <input matInput type="text" placeholder="Placeholder">
+                        <mat-error fxLayoutAlign="start">Full Name required !</mat-error>
+
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" class="fullname">
+                    <label>EmailId</label>
+                    <mat-form-field appearance="outline" class="input-field">
+                        <input matInput type="email" placeholder="Placeholder">
+                        <mat-error fxLayoutAlign="start">Full Name required !</mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" class="fullname">
+                    <label>Password</label>
+                    <mat-form-field appearance="outline" class="input-field">
+                        <input matInput type="password" placeholder="Placeholder">
+                        <mat-error fxLayoutAlign="start">Full Name required !</mat-error>
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" class="fullname">
+                    <label>Mobile Number</label>
+                    <mat-form-field appearance="outline" class="input-field">
+                        <input matInput type="tel" placeholder="Placeholder" >
+                        <mat-error fxLayoutAlign="start">Full Name required !</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="address-details" fxLayout="column" >
+                <div fxLayout="row" fxLayoutAlign="space-between end">
+                    <div class="heading">
+                        <h2>Address details</h2>
+                    </div>
+                    <div class="add-new-address" fxLayoutAlign="end">
+                        <button class="adress-btn">Add New Address</button>
+                    </div>
+                </div>
+                <div class="address-form" fxLayout="column">
+                    <div class="" fxLayout="row" fxLayoutGap=10px
+                    >
+                        <div>
+                            <h2>1.WORK</h2>
+                        </div>
+                        <div class="edit">
+                            <sub>Edit</sub>
+                        </div>
+                    </div>
+                    <div fxLayout="column" class="fullname">
+                        <label>Mobile Number</label>
+                        <mat-form-field appearance="outline" class="input-field">
+                            <input matInput type="address" placeholder="Placeholder" >
+                            <mat-error fxLayoutAlign="start">Full Name required !</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap=100px fxFlex.xs=100 fxLayout.xs=column fxLayoutGap.xs=1px>
+                        <div>
+                            <div fxLayout="column" class="fullname">
+                                <label>city/town</label>
+                                <mat-form-field appearance="outline" class="input-field">
+                                    <input matInput placeholder="Placeholder" class="input-field" >
+                                    <mat-error>City required !</mat-error>
+
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div>
+                            <div fxLayout="column" class="state">
+                                <label>State</label>
+                                <mat-form-field appearance="outline" class="state" style="width: 100%;" class="input-field">
+                                    <input matInput placeholder="Placeholder" style="width: 100%;">
+                                    <mat-error>State required !</mat-error>
+
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutGap=10px style="margin-left: 0px;">
+                        <div>
+                            type
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="start" fxLayout.xs="column"  fxLayoutGap=20px>
+                            <mat-radio-group aria-label="Select an option" >
+                                <mat-radio-button value="Home">Home</mat-radio-button>
+                                <mat-radio-button style="margin-left: 70px;" value="Office">Office</mat-radio-button>
+                                <mat-radio-button style="margin-left: 70px;" value="Other">Other</mat-radio-button>
+                            </mat-radio-group>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</form>

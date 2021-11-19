@@ -1,57 +1,380 @@
-.bookstore-head{
-    margin-left: -20px; cursor: pointer;
-}
-.haeding{
-    margin-left: 201px;
-    font-size: 25px;
-}
 
-.header-container{
-    
-    height: 60px;
+// // .header-class{
 
-}
-.button{
-margin-left: 0;
+// // }
 
-}
-.cart-class{
-    margin-top: 0px; margin-left: 90px; cursor: pointer
-}
-.search{
-    width: 75%;
-    border: none;
-    outline: none;
-    margin-left: -20px;
-    height: 20px;
-    font-size: 18px;
-}
-.my-profile{
+// // .bookstore-head{
+// //     margin-left: -20px; cursor: pointer;
+// // }
+// // .haeding{
+// //     margin-left: 201px;
+// //     font-size: 25px;
+// // }
+
+// // .header-container{
+// //     background-color: #A03037; 
+// //      width: 1366px;
+// //     height: 60px;
+
+// // }
+// // .button{
+// // margin-left: 0;
+
+// // }
+// // .cart-class{
+// //     margin-top: 0px;
+// //      margin-left: 10px;
+// //       cursor: pointer
+// // }
+// // .search{
+// //     width: 75%;
+// //     border: none;
+// //     outline: none;
+// //     margin-left: -20px;
+// //     height: 20px;
+// //     font-size: 18px;
+// // }
+// // .my-profile{
    
-    &:hover{
-        background-color: lightcoral;
-    } 
-}
-.logout{
-    border: 1px solid #A03037;
+// //     &:hover{
+// //         background-color: lightcoral;
+// //     } 
+// // }
+// // .logout{
+// //     border: 1px solid #A03037;
+// // }
+
+// // .cart-button{
+// //     border: none;
+// //     background-color:#A03037 ;
+// // }
+// // .main-con.xs{
+// //     width: 100%;
+// // }
+
+
+// // // @media only screen and (max-width: 599px) {
+// // // .main-con{
+// // //     width: 100%;
+// // // }
+// // // .bookstore-head{
+// // //     margin-left: -125px;
+// // // }
+
+// // // .header-container{
+// // //     width: 100%;
+// // //     background-color: seagreen;
+// // // }
+// // // // .cart-class{
+// // // //     margin-left: -80px;
+// // // // }
+// // //  .profile{
+// // //      background-color: sienna;
+// // //      margin-left: -50px;
+// // // position: relative;
+// // //  }
+// // // .small-book{
+// // //     width: 50%;
+// // // }
+// // // }
+// *{
+//     text-decoration: none;
+// }
+
+// .example-spacer {
+//     flex: 1 1 auto;
+//   }
+
+// mat-toolbar {
+//     background: #8F2B2F;
+//     // width: 100vw;
+// }  
+
+// #searchbar{
+//     cursor: pointer;
+//     background-color: #f1f3f4;
+//     border-bottom: 0px;
+//     border-top: 0px;
+//     border-left: 0px;
+//     border-right: 0px;
+//     position: relative;
+//     margin-left: -50px;
+//     margin-top: 30px;
+//     padding: 15px 15px 15px 60px;
+//     bottom: 15px;
+//     height: 10px;
+//     width: 650px;
+//     border-radius: 5px;
+// }
+
+// #icon {
+//     position: relative;
+//     margin-left: 70px;
+//     padding: 10px 10px 10px 10px;
+//     z-index: 2;
+//     color: black;
+//     opacity: 0.5;
+// }
+ 
+// // toolbar icon
+
+// #icon:hover {
+//     // padding: 10px 10px 10px 10px;
+//     transition: 0.2s;
+//     background: lightgray;
+//     border-radius: 120px;
+//     // margin: 2px 2px 2px 2px;
+// }
+
+// .container {
+   
+//     // border: 2px solid black;
+//     // padding: 11px 30px -100px 30px;
+//     padding-right: 35px;
+//     padding-left: 35px;
+//     //  padding-bottom: -40px;
+// }
+
+// .container2 {
+//     // border-left: 2px solid #8F2B2F;
+//     // border-right: 2px solid #8F2B2F;
+//     // padding: 11px 30px 11px 30px;
+//     padding-right: 35px;
+//     padding-left: 35px;
+// }
+
+// .container2 {
+//     // border-right: 2px solid #8F2B2F;
+//     // padding: 11px 30px 11px 30px;
+//     padding-right: 35px;
+//     padding-left: 35px;
+// }
+// .profile-button{
+//     background-color: #A03037;
+//     border: none;
+// }
+
+// .cart-button{
+//     margin-top: 0px;
+//     border: none;
+//     height: 30px;
+//      background-color:#A03037 ;
+//  }
+// .profile-icon {
+//     margin-top: 0px;
+// }
+
+// .profile-hint {
+//     position: relative;
+//     color: white;
+//     font-size: 13px;
+//     margin-top: 0px;
+// }
+// .person-icon-head{
+//     margin-top: -50px;
+// }
+// .profile-btn{
+//     background-color:#A03037 ;
+//     border: none;
+    
+// }
+// .person-img{
+//     margin-top: -20px;
+// }
+// .footer {
+//     width: 100%;
+//     height: 60px;
+//     background-color: black;
+//     color: white;
+//     padding-left: 200px;
+//     margin-top: 100px;
+// }
+
+// #logout {
+//     // padding: 5px 5px 5px 5px;
+//     border: 2px solid #A03037;
+//     margin-left: 45px;
+//     margin-top: 5px;
+// }
+
+// // respondive dashboard
+
+// .regular {
+//     position: sticky;
+//     background-color: #A03037; 
+//     color: white; 
+//     padding-left: 150px;
+//     padding-right: 150px;
+// }
+
+// // style="background-color: #A03037; color: white; padding-left: 150px; padding-right: 150px;"
+
+// .small {
+//     position: sticky;
+//     background-color: #A03037; 
+//     color: white; 
+//     padding-left: 5px;
+//     padding-right: 0px;
+//     background-size: 100%;
+// }
+
+// .medium {
+//     position: sticky;
+//     background-color: #A03037; 
+//     color: white; 
+//     padding-left: 50px;
+//     padding-right: 50px;
+// }
+
+// .iconing {
+//      // border-left: 2px solid #8F2B2F;
+//     //  border-right: 2px solid #8F2B2F;
+//      // padding: 11px 30px 11px 30px;
+//      padding-right: 15px;
+//      padding-left: 5px;
+//     //  padding-bottom: -15px;
+//     background-color: #A03037; 
+
+// }
+
+*{
+    text-decoration: none;
 }
 
-@media only screen and (max-width: 599px) {
-.main-con{
-    width: 100%;
-}
-.bookstore-head{
-    margin-left: -125px;
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+mat-toolbar {
+    background: #8F2B2F;
+    // width: 100vw;
+}  
+
+#searchbar{
+    cursor: pointer;
+    background-color: #f1f3f4;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-left: -50px;
+    margin-top: 30px;
+    padding: 15px 15px 15px 60px;
+    bottom: 15px;
+    height: 10px;
+    width: 650px;
+    border-radius: 5px;
 }
 
-.header-container{
-    width: 100%;
+#icon {
+    position: relative;
+    margin-left: 70px;
+    padding: 10px 10px 10px 10px;
+    z-index: 2;
+    color: black;
+    opacity: 0.5;
 }
-.cart-class{
+ 
+// toolbar icon
+
+#icon:hover {
+    // padding: 10px 10px 10px 10px;
+    transition: 0.2s;
+    background: lightgray;
+    border-radius: 120px;
+    // margin: 2px 2px 2px 2px;
+}
+.profile-cart{
     margin-left: -50px;
 }
-.profile{
-    margin-left: -10px;
+
+.container {
+   
+    margin-left: -250px;
+    // border: 2px solid black;
+    // padding: 11px 30px -100px 30px;
+    padding-right: 35px;
+    padding-left: 35px;
+    // padding-bottom: -40px;
+}
+
+.profile-icon {
+    position: relative;
+    margin-top: 15px;
+}
+.profile-button{
+    background-color:#A03037 ;
+    height: 40px;
+    border: none;
+}
+.cart-button{
+    margin-top: 10px;
+    height: 1px;
+    // border: none;
+    background-color: #A03037;
+}
+
+.profile-hint {
+    position: relative;
+    color: white;
+    font-size: 13px;
+    margin-top: -10px;
+}
+.cart-hint{
+    position: relative;
+    color: white;
+    font-size: 10px;
+    margin-top: 22px;
+}
+#logout {
+    border: 2px solid #A03037;
+    margin-left: 45px;
+    margin-top: 5px;
+}
+
+// respondive dashboard
+
+.regular {
+    position: sticky;
+    background-color: #A03037; 
+    color: white; 
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+// style="background-color: #A03037; color: white; padding-left: 150px; padding-right: 150px;"
+
+.small {
+    position: sticky;
+    background-color: #A03037; 
+    color: white; 
+    padding-left: 5px;
+    padding-right: 0px;
+    background-size: 100%;
+}
+
+.medium {
+    position: sticky;
+    background-color: #A03037; 
+    color: white; 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.iconing-search {
+     padding-right: 70px;
+     padding-left: 5px
+}
+
+.iconing-profile {
+    padding-right: 30px;
+    padding-left: 5px
 
 }
+
+.iconing-cart {
+    padding-right: 20px;
+    padding-left: 5px
+
 }

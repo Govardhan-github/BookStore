@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from 'src/app/Services/bookService/book.service';
-import { JsonpClientBackend } from '@angular/common/http';
+import { DataService } from 'src/app/Services/DataService/data.service';
 
 @Component({
   selector: 'app-get-books',
@@ -13,19 +13,20 @@ export class GetBooksComponent implements OnInit {
   data: any;
   id: any;
 
-  constructor(private bookServices : BookService) { }
-
+  constructor(private bookServices : BookService,private dataservice : DataService) { }
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
-    this.getBooks();
+    this.dataservice.recevieData.subscribe((response:any)=>{
+      
+      this.getBooks();
+
+      
+    })
 
   }
   getBooks(){
-
-    this.bookServices.getBooksService().subscribe(
-      (response: any) => { 
-        console.log(response.result)
-        this.booksArray=response['result'];
+    this.bookServices.getBooksService().subscribe((response: any) => { 
+        this.booksArray=response.result;
         console.log("getBooksArray",this.booksArray);
 
       })
@@ -33,7 +34,6 @@ export class GetBooksComponent implements OnInit {
 
   quickView(book: any) {
     console.log(book._id);
-
     localStorage.setItem('bookId', book._id);
   }
 }
